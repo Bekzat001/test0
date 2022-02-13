@@ -7,7 +7,7 @@ public class Main {
         Data information=new Data();
         Service forcompany=new Service();
         Personal forindividuals=new Personal();
-        System.out.println("Hello,you are in main page in Beka.inc(Cybersecurity)");//welcome words
+        System.out.println("Hello,you are in main page in Beka.inc(Cybersecurity)");//Welcome words
         System.out.println("If you want to see our security packs enter 1" +
                 "\nif you have any questions or information enter 2" +
                 "\nif you worker in this company enter 3");
