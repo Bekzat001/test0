@@ -1,38 +1,32 @@
 package com.company;
-import java.util.Scanner;
-
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
-       /* Employee employee1=new Employee();
-        employee1.setName("Beka");
-        employee1.setPosition("CEO");
-        employee1.setYearsWorking(5);
-
-        System.out.println(employee1.getName());
-        System.out.println(employee1.getPosition());
-        System.out.println(employee1.getYearsWorking());*/
-        /*String name="EQS";
-        int age=0;
-        double clirens=17.8;
-        System.out.printf("My car is %s and hello \n", name);
-        System.out.printf("Probeg is %.2f \n", clirens);
-        System.out.print("Enter ur full name: ");
         Scanner scanner=new Scanner(System.in);
-        String name=scanner.next();        System.out.println("Hello "+name);
-        int age=scanner.nextInt();         System.out.printf("U r %d y.o. ", age);
-        double height=scanner.nextDouble(); System.out.printf("U r %.2f y.o. ",height);
-        String name=scanner.nextLine();     System.out.printf("ur fio is %s \n",name);
-*/
-        Employee student1=new Employee();
-        student1.setName("Beka");
-        student1.setDepartment("CS");
-        student1.setYear(3);
-       // System.out.println(student1.getName());
-
-        Employee student2=new Employee();
-        student2.setName("Seka");
-        student2.setDepartment("SE");
-        student2.setYear(1);
-        //System.out.println(student2.getYear());
+        Signin login=new Signin();
+        Data information=new Data();
+        Service forcompany=new Service();
+        Personal forindividuals=new Personal();
+        System.out.println("Hello,you are in main page in Beka.inc(Cybersecurity)");//welcome words
+        System.out.println("If you want to see our security packs enter 1" +
+                "\nif you have any questions or information enter 2" +
+                "\nif you worker in this company enter 3");
+        int choose=scanner.nextInt();//define need of user
+        if(choose==1){
+            System.out.println("Please,enter if you: want to buy for you(enter 1) or for company(enter 2)");
+            int n=scanner.nextInt();
+            if(n==1){
+                forindividuals.inform();
+            }
+            else if(n==2){
+                forcompany.inform();
+            }
+        }
+        else if(choose==2){
+            information.Contacts();
+        }
+        else if(choose==3){
+            login.adminorworker();
+        }
     }
 }
